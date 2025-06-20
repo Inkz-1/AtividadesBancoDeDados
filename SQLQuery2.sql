@@ -1,4 +1,4 @@
--- Banco de dados Escola Maupa
+-- Projeto Escola Maupa
 CREATE DATABASE Maupa;
 USE Maupa;
 
@@ -25,7 +25,7 @@ CREATE TABLE Alunos (
     DataNascimento DATE
 );
 
--- MatrÌculas
+-- Matr√≠culas
 CREATE TABLE Matriculas (
     Id INT PRIMARY KEY IDENTITY,
     AlunoId INT,
@@ -35,17 +35,17 @@ CREATE TABLE Matriculas (
     FOREIGN KEY (CursoId) REFERENCES Cursos(Id)
 );
 
--- InserÁ„o de dados
+-- Inser√ß√£o de dados
 INSERT INTO Professores (Nome, Materia) VALUES
 ('Jailson Souza', 'Banco de dados'),
 ('Fernanda Souza', 'IA');
 
 INSERT INTO Cursos (Nome, CargaHoraria, ProfessorId) VALUES
 ('MtSql', 60, 1),
-('IntroduÁ„o a IA', 40, 2);
+('Introdu√ß√£o a IA', 40, 2);
 
 INSERT INTO Alunos (Nome, DataNascimento) VALUES
-('Jo„o Pedro', '2006-05-15'),
+('Jo√£o Pedro', '2006-05-15'),
 ('AnaJulia', '2005-11-20');
 
 INSERT INTO Matriculas (AlunoId, CursoId) VALUES
